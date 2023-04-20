@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #fff;
+    color: #000;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .logo img {
+    width: 200px;
+}
+
+.navbar .search {
+	flex: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar .search input {
+	border: 2px solid #dfdfdf;
+    border-radius: 20px;
+	background: white;
+	padding: 10px;
+	width: 70%;
+}
+
+.navbar .search button {
+	width: 60px;
+	height: 40px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: transparent;
+}
+
+.navbar .search ion-icon {
+	width: 20px;
+	height: 20px;
+	color: #000;
+}
+
+.navbar .navbar-nav a {
+    color: #000;
+    display: inline-block;
+    font-size: 2vh;
+    margin: 1vh;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5vh;
+    border-bottom: 0.1vh solid blue;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.6);
+}
+
+.navbar .navbar-extra a {
+    color: #000;
+    margin: 0 0.5vh;
+}
+
+.navbar .navbar-extra ion-icon {
+	width: 25px;
+	height: 25px;
+}
+
+/* Terbaru */
+.terbaru {
+    padding: 15vh 5%;
+    max-height: 300px; /* set max-height */
+    scroll-behavior: smooth; /* smooth scrolling behavior */
+    }
+    
+.terbaru h1 {
+    font-size: 28px;
+    padding: 1vh 10% 0;
+    font-weight: 400;
+    position: relative;
+    }
+    
+.terbaru .comic-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    scroll-snap-align: start;
+    margin: 0 auto;
+    justify-content: c;
+}
+
+.terbaru .comic-items {
+  flex: 0 0 auto;
+  width: 20vh;
+  margin: 10px;
+  scroll-snap-align: start;
+}
+
+.terbaru .cover-container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+    
+.terbaru .cover-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+    
+.terbaru .cover-container:hover img {
+    transform: scale(1.1);
+}
+    
+.terbaru .tittle a {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.terbaru span .tag {
+    background-color: #FF4500;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+  
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 890px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .navbar .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: blue;
+        height: 9vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .navbar .navbar-nav a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        margin: 0 6%;
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+    .navbar-nav a ion-icon {
+        font-size: 32px;
+        margin-bottom: 5px;
+        padding: 1vh 0 0;
+      }
+
+    .navbar .search {
+        justify-content: right;
+    }
+
+    .terbaru .comic-list {
+        overflow-x: auto;
+    white-space: nowrap;
+    }
+
+    .terbaru .comic-items {
+        width: 15vh;
+      }
+}
+  
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .navbar .logo img {
+        width: 150px;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        margin: 0 5%;
+        font-size: 10px;
+    }
+
+    .navbar-nav a ion-icon {
+        font-size: 24px;
+        margin-bottom: 5px;
+        padding: 1vh 0 0;
+      }
+
+}
+  
+
+@media screen and (min-width: 821px) {
+    .navbar-nav a ion-icon {
+        display: none;
+      }
+}

@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 3%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .logo img {
+  height: 60px;
+}
+
+.navbar .search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+.navbar .search input[type="text"] {
+  border: none;
+  outline: none;
+  width: 400px;
+  padding: 5px;
+}
+
+.navbar .search button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .navbar-nav a {
+  display: flex;
+  align-items: center;
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.navbar .navbar-nav a ion-icon {
+  margin-right: 5px;
+}
+
+/* Terbaru */
+.terbaru {
+  padding: 10px 20px;
+  max-height: 300px;
+  scroll-behavior: smooth;
+}
+
+.terbaru h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.comic-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.comic-items {
+  position: relative;
+  overflow: hidden;
+}
+
+.comic-items .cover-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 150%;
+  overflow: hidden;
+}
+
+.comic-items img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comic-items .tittle {
+  margin-top: 10px;
+}
+
+.comic-items .tittle a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+  text-decoration: none;
+}
+
+.comic-items .tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #222;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+/* Media Query untuk Tablet */
+@media only screen and (max-width: 1024px) {
+  .comic-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar .logo img {
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: blue;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+.navbar .navbar-nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 0 6%;
+    font-size: 10px;
+    text-decoration: none;
+  }
+
+.navbar-nav a ion-icon {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+
+.navbar .search {
+    justify-content: right;
+  }
+}
+
+/* Media Query untuk Smartphone */
+@media only screen and (max-width: 480px) {
+  .comic-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .navbar .logo img {
+    height: 30px;
+  }
+
+  .navbar .navbar-nav a ion-icon {
+    font-size: 22px;
+  }
+
+  .navbar .navbar-nav a {
+    font-size: 8px;
+  }
+
+  .navbar .search input[type="text"] {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .navbar-nav a ion-icon {
+      display: none;
+    }
+}
