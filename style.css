@@ -231,4 +231,8 @@ body {
   .navbar .search input[type="text"] {
     width: 180px;
   }
+  
+  .terbaru h1 {
+    font-size: 60%;
+  }
 }
