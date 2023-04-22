@@ -164,7 +164,6 @@ body {
   max-width: 900px;
   padding: 0  1%;
   margin: 20px auto;
-  margin-bottom: 90px;
   border: 2px solid #aaaa;
 }
 
@@ -351,6 +350,10 @@ body {
   .comic-items .tag {
     font-size: 10px;
   }
+  
+  .populer {
+    margin-bottom: 90px;
+  }  
 
   .populer .komik-list {
     grid-template-columns: auto;
