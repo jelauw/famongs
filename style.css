@@ -310,6 +310,10 @@ body {
     margin-top: 90px;
   }
 
+  .populer {
+    margin-bottom: 90px;
+  }
+
   .populer .komik-list {
     grid-template-columns: auto auto;
   }
@@ -350,10 +354,6 @@ body {
   .comic-items .tag {
     font-size: 10px;
   }
-  
-  .populer {
-    margin-bottom: 90px;
-  }  
 
   .populer .komik-list {
     grid-template-columns: auto;
