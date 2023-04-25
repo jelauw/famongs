@@ -13,6 +13,7 @@ body {
   color: #000;
 }
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -20,7 +21,7 @@ body {
   align-items: center;
   background-color: #fff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  padding: 10px 3%;
+  padding: 0 3%;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +30,7 @@ body {
 }
 
 .navbar .logo img {
-  height: 60px;
+  height: 50px;
   margin-top: 10px;
 }
 
@@ -68,43 +69,50 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 20px;
+  font-size: 14px;
 }
 
 .navbar .navbar-nav a ion-icon {
   margin-right: 5px;
 }
+/* Navbar End */
 
-/* Terbaru */
+h2 {
+  position: sticky;
+  font-weight: bold;
+  color: #ff9900;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+/* Baris Terbaru */
 .terbaru {
-  margin: auto;
-  margin-top: 100px;
-  max-width: 900px;
   scroll-behavior: smooth;
-  padding: 0 1%;
   overflow: hidden;
+  margin: auto;
   white-space: nowrap;
+  margin-top: 40px;
+  max-width: 900px;
+  border-radius: 10px;;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .terbaru h2 {
-  float: left;
-  position: sticky;
-  font-weight: 300;
-  margin-left: 5px;
+  margin-top: 40px;
 }
 
 .comic-list {
   display: flex;
   justify-content: space-between;
-  width: 870px;
-  margin: auto;
-  margin-top: 5px;
+  width: 750px;
+  margin: 20px auto;
+
 }
 
 .comic-items {
   position: relative;
   overflow: hidden;
-  width: 200px;
-  margin: 5px;
+  width: 110px;
 }
 
 .comic-items .cover-container {
@@ -130,13 +138,13 @@ body {
 
 .comic-items .tittle a {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #222;
   text-decoration: none;
 }
 
 .tittle p {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .update {
@@ -148,14 +156,17 @@ body {
 .comic-items .tag {
   position: absolute;
   top: 10px;
-  right: 10px;
-  background-color: #222;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   border-radius: 3px;
 }
+/* Terbaru End */
+
+
 
 /* Populer */
 .populer {
@@ -165,33 +176,29 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   max-width: 900px;
-  padding: 0  1%;
   margin: 20px auto;
-}
-
-.populer h2 {
-  position: sticky;
-  font-weight: 300;
-  margin: 10px 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 .populer .komik-list {
   display: grid;  
-  grid-template-columns: 400px 400px;
-  margin: auto;
-
+  grid-template-columns: repeat(2, 1fr);
+  margin: 20px auto;
+  width: 780px;
 }
 
 .komik {
   display: flex;
   align-items: center;
-  margin: 10px 0;  
+  margin: 5px 10px;
 }
 
 .populer .komik .gambar {
   position: relative;
   display: inline-block;
-  width: 150px;
+  width: 110px;
+  margin-left: 5px;
 }
 
 .populer .komik .gambar img {
@@ -222,14 +229,14 @@ body {
   margin: 0 10px;
 }
 
-.informasi h2 {
-  font-size: 2rem;
+.informasi h3 {
   margin-bottom: 10px;
+  font-size: large;
 }
 
 .informasi p {
-  font-size: 0.9rem;
   margin-bottom: 5px;
+  font-size: 10px;
 }
 
 .informasi .genre {
@@ -250,25 +257,24 @@ body {
   font-size: 14px;
   margin-bottom: 5px;
 }
+/* Populer End */
+
+
 
 /* Genre */
-.genre {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.genre h2 {
-  font-weight: 300;
-  margin-bottom: 10px;
+.genre-komik {
+  margin: 10px auto;
+  max-width: 900px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 
 .genre-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  padding: 20px;
   margin: auto;
 }
 
@@ -281,6 +287,7 @@ body {
   color: #333;
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
+  font-size: 10px;
 }
 
 .genre-options a:hover {
@@ -299,6 +306,7 @@ body {
 /* Media Query untuk Tablet */
 @media only screen and (max-width: 1024px) {
 
+  /* Navbar */
   .navbar .logo img {
     height: 40px;
     margin-top: 10px;
@@ -312,7 +320,7 @@ body {
     right: 0;
     left: 0;
     background-color: blue;
-    height: 80px;
+    height: 60px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -344,20 +352,23 @@ body {
 .navbar .search {
     justify-content: right;
   }
+  /* Navbar End */
 
+
+  /* Terbaru */
   .terbaru {
     overflow-x: auto;
-    margin-top: 90px;
   }
+  /* Terbaru End */
 
-  .populer .komik-list {
-    grid-template-columns: auto auto;
-  }
 
-  .genre-options {
-    margin-bottom: 85px;
+  /* Genre Komik */
+  .genre-komik {
+    margin-bottom: 80px;
   }
 }
+
+
 
 /* Media Query untuk Smartphone */
 @media only screen and (max-width: 560px) {
@@ -381,38 +392,43 @@ body {
   .navbar .search input[type="text"] {
     width: 140px;
   }
+  /* Navbar End */
 
+
+  h2 {
+    font-size: 18px;
+  }
+
+  /* Terbaru */
   .terbaru {
-    margin-top: 80px;
+    overflow-x: auto;
   }
 
-  .comic-list {
-    width: 800px;
-    margin-top: 35px;
+  .terbaru h2 {
+    margin-top: 20px;
   }
 
-  .comic-items .tag {
-    font-size: 10px;
+  .terbaru .comic-list {
+    padding: 0 2%;
   }
+  /* Terbaru End */
 
+
+  /* Populer */
   .populer .komik-list {
     grid-template-columns: auto;
+    width: 300px;
   }
+  /* Populer End */
 
-  .populer .komik .gambar {
-    width: 120px;
-  }
-  
-  .informasi h2 {
-    font-size: 1.5rem;
-  }
 
-  .informasi p {
-    font-size: 0.7rem;
+  /* Genre Komik */
+  .genre-komik {
+    margin-bottom: 70px;
   }
-
   .genre-options {
-    margin-bottom: 65px;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: auto;
     font-size: 12px;
   }
 }
